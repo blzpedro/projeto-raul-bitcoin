@@ -1,0 +1,5 @@
+<h2 class="mt-5 text-center mb-4">Lista de Valores</h2>
+<div class="row mt-1 justify-content-between col-8 offset-2" *ngFor="let price of this.bitcoinService.updateList">
+	<p class="m-0"><strong>REAIS: </strong>{{price.BRL | currency: 'BRL'}} | <strong>DOLAR: </strong>{{price.USD | currency: 'USD'}}</p> 
+	<p class="m-0">{{price.timestamp | date:"short"}}</p>
+</div>

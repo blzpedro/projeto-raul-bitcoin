@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">{{name}}</a>	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/']">Início</a>
+			</li>
+
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/minha-carteira']">Minha Carteira</a>
+			</li>
+
+			<li class="nav-item active">
+				<a class="nav-link" [routerLink]="['/bitcoin']">BitCoin</a>
+			</li>
+
+
+		</ul>
+	</div>
+	
+	<p class="mr-2 m-0">{{ this.getLastPrice() | currency: 'BRL' }}</p>
+	<p class="mr-2 m-0">O valor atual é <strong>{{ this.getCompare() }}</strong></p>
+	<p class="m-0">{{ this.getInitialValue() | currency: 'BRL' }}</p>
+</nav>
+<div class="container-fluid">
+	<router-outlet></router-outlet>
+</div>

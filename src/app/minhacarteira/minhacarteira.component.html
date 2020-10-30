@@ -1,0 +1,12 @@
+<h2 class="mt-5 text-center font-weight-bold">Minha Carteira</h2>
+<h3 class="text-center mb-5">R$ <span id="myValue">0</span></h3>
+<h4 class="mr-2 mt-3 mb-2 text-center">Valor Atual:</h4>
+<div class="col-8 row offset-2">
+	<p class="col-6"><strong>DÓLAR:</strong> $ {{ this.getCurrentPrice().bpi.USD.rate }}</p>
+	<p class="col-6 text-right"><strong>REAIS:</strong> R$ {{ this.getCurrentPrice().bpi.BRL.rate }}<p>
+</div>
+
+<div class="d-flex mt-5 justify-content-between col-8 offset-2">
+	<input type="button" class="btn btn-primary" value="Comprar" (click)="comprar()"/>
+	<input type="button" class="btn btn-secondary" value="Vender" (click)="vender()"/>
+</div>
